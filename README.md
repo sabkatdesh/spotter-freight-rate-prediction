@@ -55,7 +55,7 @@ Full methodology, leakage checks (lane-frequency check, `quote_signal` circulari
 ├── outputs/
 │   ├── validation_predictions.csv              # final submission: load_id, predicted_rate (12,000 rows)
 │   └── december_predictions.csv                # 31-row December forecast (Head B)
-├── Spotter_Freight_Rate_Model_Report.pdf        # candidate report (methodology, metrics, error analysis, December chart)
+├── Spotter_Freight_Rate_Model_Report.pdf        # report (methodology, metrics, error analysis, December chart)
 ├── requirements.txt
 └── LICENSE
 ```
