@@ -15,4 +15,4 @@ holidays>=0.20.0
 # Optional: for running score.py (if it needs matplotlib)
 matplotlib>=3.7.0
 
-# Note: google.colab is Colab-specific and NOT required for local runs
+
