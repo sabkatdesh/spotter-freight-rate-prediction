@@ -47,11 +47,16 @@ Full methodology, leakage checks (lane-frequency check, `quote_signal` circulari
 
 ```
 .
+├── data/                                       # NOT included — see Setup steps below
+│   ├── train_test.csv
+│   ├── validation.csv
+│   ├── validation_predictions_template.csv
+│   └── december_chart_inputs.csv
 ├── notebooks/
 │   └── spotter-freight-rate-prediction.ipynb   # full pipeline: EDA → cleaning → features → both heads → predictions
 ├── models/
-│   ├── lgb_head_a.txt                          # trained LightGBM model, full feature set
-│   └── lgb_head_b.txt                          # trained LightGBM model, no market signals
+│   ├── LGB_HEAD_A.txt                          # trained LightGBM model, full feature set
+│   └── LGB_HEAD_B.txt                          # trained LightGBM model, no market signals
 ├── outputs/
 │   ├── validation_predictions.csv              # final submission: load_id, predicted_rate (12,000 rows)
 │   └── december_predictions.csv                # 31-row December forecast (Head B)
@@ -62,12 +67,19 @@ Full methodology, leakage checks (lane-frequency check, `quote_signal` circulari
 
 ## Reproducing this
 
-```bash
-python -m pip install -r requirements.txt
-jupyter notebook notebooks/spotter-freight-rate-prediction.ipynb
-```
-
-The notebook expects `data/train_test.csv`, `data/validation.csv`, `data/validation_predictions_template.csv`, and `data/december_chart_inputs.csv` in place (provided by Spotter as part of the assessment, not included in this repo). Running it top to bottom reproduces both heads and both prediction outputs.
+1. Clone this repo and install dependencies:
+   ```bash
+   python -m pip install -r requirements.txt
+   ```
+2. Create a `data/` folder in the repo root and add the four files provided by Spotter as part of the assessment (not included in this repo, since it's their data):
+   - `train_test.csv`
+   - `validation.csv`
+   - `validation_predictions_template.csv`
+   - `december_chart_inputs.csv`
+3. Launch the notebook and run it top to bottom — this reproduces both heads and both prediction outputs:
+   ```bash
+   jupyter notebook notebooks/spotter-freight-rate-prediction.ipynb
+   ```
 
 To validate the output format against Spotter's scorer:
 
