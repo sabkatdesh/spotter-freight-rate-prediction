@@ -91,12 +91,7 @@ python score.py --predictions outputs/validation_predictions.csv --december-pred
 
 The scorer writes its chart to `scorer_results/candidate_december.png`, which is reproduced in Section 7 of the report.
 
-## Submission checklist (per assessment instructions)
 
-- [x] GitHub repository with solution code, dependencies (`requirements.txt`), and run instructions — this repo
-- [x] `validation_predictions.csv` — [`outputs/validation_predictions.csv`](./outputs/validation_predictions.csv), exactly `load_id,predicted_rate`
-- [x] PDF/DOCX report covering the train/test validation & split approach, plus the `candidate_december.png` chart — [`Spotter_Freight_Rate_Model_Report.pdf`](./Spotter_Freight_Rate_Model_Report.pdf)
-- [ ] 2–3 minute Loom walkthrough (key data findings, data-quality issues and fixes, model reasoning, train/validation split approach, code walkthrough) — submitted separately via the Teamtailor candidate portal
 
 ## Notes / open items
 
